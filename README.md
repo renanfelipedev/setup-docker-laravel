@@ -1,17 +1,14 @@
+# Passo a passo
 
-# Setup Docker Para Projetos Laravel
-[Assine a Academy, e Seja VIP!](https://academy.especializati.com.br)
-
-### Passo a passo
 Clone Repositório
 ```sh
-git clone https://github.com/especializati/setup-docker-laravel.git
+git clone https://github.com/renanfelipedev/setup-docker-laravel.git
 ```
 
 
-Clone os Arquivos do Laravel
+Criando projeto laravel
 ```sh
-git clone https://github.com/laravel/laravel.git example-project
+composer create-project --prefer-dist laravel/laravel projeto
 ```
 
 
@@ -30,13 +27,13 @@ cp .env.example .env
 
 Atualizar as variáveis de ambiente do arquivo .env
 ```dosini
-APP_NAME=EspecializaTi
+APP_NAME=App
 APP_URL=http://localhost:8989
 
 DB_CONNECTION=mysql
 DB_HOST=mysql
 DB_PORT=3306
-DB_DATABASE=nome_que_desejar_db
+DB_DATABASE=<nome.do.banco>
 DB_USERNAME=root
 DB_PASSWORD=root
 
@@ -58,7 +55,7 @@ docker-compose up -d
 
 Acessar o container
 ```sh
-docker-compose exec curso_x bash
+docker-compose exec app bash
 ```
 
 
